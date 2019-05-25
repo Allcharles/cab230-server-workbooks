@@ -1,6 +1,6 @@
 const shanghai = document.getElementById("shanghai");
 shanghai.addEventListener("click", () => {
-  fetch("http://localhost:3000/api/update", {
+  fetch("https://localhost/api/update", {
     method: "POST",
     body: "City=Shanghai&CountryCode=CHN&Pop=24183300",
     headers: {
@@ -27,7 +27,7 @@ shanghai.addEventListener("click", () => {
 
 const tokyo = document.getElementById("tokyo");
 tokyo.addEventListener("click", () => {
-  fetch("http://localhost:3000/api/update", {
+  fetch("https://localhost/api/update", {
     method: "POST",
     body: JSON.stringify({
       City: "Tokyo",

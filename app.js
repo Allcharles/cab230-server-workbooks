@@ -4,12 +4,15 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
+//Enable POST
 var helmet = require("helmet");
 var cors = require("cors");
 
+//Enable Database
 var options = require("./knexfile.js");
 var knex = require("knex")(options);
 
+//Enable Swagger Docs
 var swaggerUI = require("swagger-ui-express");
 var swaggerDocument = require("./docs/swagger.json");
 
