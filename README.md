@@ -12,16 +12,12 @@ These instructions are intended for QUT students in the CAB230 class. It is assu
 - Open project folder in Visual Studio Code
   - Hit `ctrl+~` to open integrated terminal
   - Run `npm install` in terminal
-  - Run `np start` in terminal
+  - Run `npm start` in terminal
 
 ## How to Use
 
-- Check commit history of project to see the changes required by each workbook
-- If you want to checkout a workbook:
-  - Click on commits
-  - Select the commit relating to the workbook you want
-  - Select 'Browse files'
-  - Clone or download project
+- Check under the releases tab to download the code related to each workbook
+- Alternatively you can check the commit history to identify the changes associated with each week
 
 ## Known Issues
 
