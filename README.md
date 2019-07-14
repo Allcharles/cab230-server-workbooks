@@ -13,11 +13,11 @@ These instructions are intended for QUT students in the CAB230 class. It is assu
   - Hit `ctrl+~` to open integrated terminal
   - Run `npm install` in terminal
   - Run `npm start` in terminal
+- Open browser to https://localhost
 
 ## How to Use
 
 - Check under the releases tab to download the code related to each workbook
-- Alternatively you can check the commit history to identify the changes associated with each week
 
 ## Known Issues
 

@@ -16,9 +16,9 @@
     "knex": "^0.16.5",
     "morgan": "~1.9.1",
     "mysql": "^2.17.1",
-    "swagger-ui-express": "^4.0.4"
+    "swagger-ui-express": "^4.0.7"
   },
   "devDependencies": {
-    "nodemon": "^1.19.0"
+    "nodemon": "^1.19.1"
   }
 }
