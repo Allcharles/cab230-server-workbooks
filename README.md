@@ -8,12 +8,12 @@ These instructions are intended for QUT students in the CAB230 class. It is assu
   - Install should include Workbench and Server
   - If Workbench fails to run, restart your computer
   - If Workbench continues to fail, reinstall it
-- Edit knexfile.js with your username and password for the MySQL server
+- Edit knexfile.js or database/db.js (depending on the prac) with your username and password for the MySQL server
 - Open project folder in Visual Studio Code
   - Hit `ctrl+~` to open integrated terminal
   - Run `npm install` in terminal
   - Run `npm start` in terminal
-- Open browser to https://localhost
+- Open browser to https://localhost or http://localhost:3000 (depending on the prac)
 
 ## How to Use
 
