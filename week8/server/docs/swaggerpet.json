@@ -1,0 +1,89 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "World City API",
+    "description": "This is a simple Express API based on the World Cities Database. It supports basic city and province listings, along with filtering based on Country Code",
+    "version": "1.0.0",
+    "termsOfService": "http://swagger.io/terms/",
+    "contact": { "email": "j.hogan@qut.edu.au" },
+    "license": {
+      "name": "Apache 2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "basePath": "/api",
+  "tags": [
+    {
+      "name": "information",
+      "description": "General API description"
+    },
+    {
+      "name": "query",
+      "description": "API queries based on city and optional country code."
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "tags": ["information"],
+        "summary": "Simple information page",
+        "description": "Very basic API home page promising more information",
+        "operationId": "apiHome",
+        "produces": ["text/html"],
+        "responses": {
+          "200": {
+            "description": "successful operation"
+          }
+        }
+      }
+    },
+    "/api/city": {
+      "get": {
+        "tags": ["query"],
+        "summary": "List cities and provinces",
+        "description": "Full listing of cities and their provinces for the database",
+        "operationId": "listCitiesAndDistricts",
+        "produces": ["application/json"],
+        "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": {
+                "type": "object",
+                "properties": {
+                  "Error": {
+                    "type": "string",
+                    "enum": ["true", "false"]
+                  },
+                  "Message": {
+                    "type": "string",
+                    "enum": ["Success", "Failure"]
+                  },
+                  "City": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "district": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
