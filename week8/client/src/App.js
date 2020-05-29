@@ -13,7 +13,7 @@ function App() {
         Pop: "12315271"
       }),
       headers: {
-        "Content-Type": "application/x-www-form-urlencoded"
+        "Content-Type": "application/json"
       }
     })
       .then((res) => res.json())
