@@ -1,12 +1,11 @@
 {
   "openapi": "3.0.0",
-
   "info": {
     "title": "World City API",
     "description": "This is a simple Express API based on the World Cities Database. It supports basic city and province listings, along with filtering based on Country Code",
     "version": "1.0.0",
     "termsOfService": "http://swagger.io/terms/",
-    "contact": { "email": "example@qut.edu.au" },
+    "contact": { "email": "j.hogan@qut.edu.au" },
     "license": {
       "name": "Apache 2.0",
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
@@ -21,11 +20,11 @@
   "tags": [
     {
       "name": "information",
-      "description": "General API Description"
+      "description": "General API description"
     },
     {
       "name": "query",
-      "description": "API queries based on city and optional country code"
+      "description": "API queries based on city and optional country code."
     }
   ],
   "paths": {
@@ -38,7 +37,7 @@
         "produces": ["text/html"],
         "responses": {
           "200": {
-            "description": "Successful Operation"
+            "description": "successful operation"
           }
         }
       }
@@ -52,32 +51,29 @@
         "produces": ["application/json"],
         "responses": {
           "200": {
-            "description": "Successful Operation",
+            "description": "successful operation",
             "schema": {
-              "type": "object",
-              "properties": {
-                "Error": {
-                  "type": "string",
-                  "properties": {
-                    "Error": {
-                      "type": "string",
-                      "enum": ["true", "false"]
-                    },
-                    "Message": {
-                      "type": "string",
-                      "enum": ["Success", "Failure"]
-                    },
-                    "City": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "name": {
-                            "type": "string"
-                          },
-                          "district": {
-                            "type": "string"
-                          }
+              "type": {
+                "type": "object",
+                "properties": {
+                  "Error": {
+                    "type": "string",
+                    "enum": ["true", "false"]
+                  },
+                  "Message": {
+                    "type": "string",
+                    "enum": ["Success", "Failure"]
+                  },
+                  "City": {
+                    "type": "array",
+                    "items": {
+                      "type": "object",
+                      "properties": {
+                        "name": {
+                          "type": "string"
+                        },
+                        "district": {
+                          "type": "string"
                         }
                       }
                     }

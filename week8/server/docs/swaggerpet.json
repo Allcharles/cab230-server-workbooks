@@ -53,28 +53,26 @@
           "200": {
             "description": "successful operation",
             "schema": {
-              "type": {
-                "type": "object",
-                "properties": {
-                  "Error": {
-                    "type": "string",
-                    "enum": ["true", "false"]
-                  },
-                  "Message": {
-                    "type": "string",
-                    "enum": ["Success", "Failure"]
-                  },
-                  "City": {
-                    "type": "array",
-                    "items": {
-                      "type": "object",
-                      "properties": {
-                        "name": {
-                          "type": "string"
-                        },
-                        "district": {
-                          "type": "string"
-                        }
+              "type": "object",
+              "properties": {
+                "Error": {
+                  "type": "string",
+                  "enum": ["true", "false"]
+                },
+                "Message": {
+                  "type": "string",
+                  "enum": ["Success", "Failure"]
+                },
+                "City": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "name": {
+                        "type": "string"
+                      },
+                      "district": {
+                        "type": "string"
                       }
                     }
                   }

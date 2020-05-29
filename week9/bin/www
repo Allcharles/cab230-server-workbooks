@@ -4,22 +4,27 @@
  * Module dependencies.
  */
 
-var app = require("../app")
-var debug = require("debug")("server")
-var http = require("http")
+const app = require("../app")
+const debug = require("debug")("week9")
+const fs = require("fs")
+const https = require("https")
+
+const privateKey = fs.readFileSync("./sslcert/cert.key", "utf8")
+const certificate = fs.readFileSync("./sslcert/cert.pem", "utf8")
+const credentials = { key: privateKey, cert: certificate }
 
 /**
  * Get port from environment and store in Express.
  */
 
-var port = normalizePort(process.env.PORT || "3000")
+var port = normalizePort(process.env.PORT || "443")
 app.set("port", port)
 
 /**
- * Create HTTP server.
+ * Create HTTPS server.
  */
 
-var server = http.createServer(app)
+var server = https.createServer(credentials, app)
 
 /**
  * Listen on provided port, on all network interfaces.

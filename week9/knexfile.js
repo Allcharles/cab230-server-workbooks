@@ -1,9 +1,11 @@
+// Update with your config settings.
+
 module.exports = {
   client: "mysql",
   connection: {
-    host: "localhost",
+    host: "127.0.0.1",
     database: "world",
     user: "root",
-    password: "root"
+    password: "toor"
   }
-};
+}
